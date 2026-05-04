@@ -7,223 +7,178 @@
     <meta name="description" content="Official profile of OLU — Pro Player, Streamer, dan Caster Delta Force dari ONIC Esports. Commander Halal. IGL & Team Analyst.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Particle Background -->
-    <canvas id="particles"></canvas>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
+                <img src="assets/onic-logo.png" alt="ONIC" class="nav-logo-img">
                 <span class="logo-text">OLU</span>
-                <span class="logo-tag">ONIC</span>
             </a>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#role">Role</a></li>
-                <li><a href="#socials">Connect</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#achievements">ACHIEVEMENTS</a></li>
+                <li><a href="#role">ROLE</a></li>
+                <li><a href="#socials">CONNECT</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <!-- Team & Game Logos -->
-            <div class="hero-logos">
-                <div class="hero-logo-item">
-                    <img src="assets/onic-logo.png" alt="ONIC Esports Logo" class="hero-logo-img">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-logos">
+                    <img src="assets/onic-logo.png" alt="ONIC Esports" class="hero-logo-small">
+                    <span class="hero-logo-x">&times;</span>
+                    <img src="assets/deltaforce-logo.png" alt="Delta Force" class="hero-logo-small df">
                 </div>
-                <span class="hero-logo-divider">×</span>
-                <div class="hero-logo-item">
-                    <img src="assets/deltaforce-logo.png" alt="Delta Force Logo" class="hero-logo-img df-logo">
-                </div>
-            </div>
-            <!-- Profile Photo -->
-            <div class="hero-profile">
-                <div class="hero-photo-wrapper">
-                    <img src="assets/olu-photo.jpg" alt="OLU - ONIC Esports" class="hero-photo">
+                <h1>Hi! I'm <span class="text-primary">OLU</span></h1>
+                <h2>I am a <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h2>
+                <p class="hero-tagline">"Commander Halal" &mdash; IGL & Analyst di ONIC Esports</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">READ MORE</a>
+                    <a href="#socials" class="btn btn-outline">CONNECT <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-            <div class="hero-badge">ONIC ESPORTS</div>
-            <h1 class="hero-title">
-                <span class="hero-name">OLU</span>
-                <span class="hero-alias">"Commander Halal"</span>
-            </h1>
-            <p class="hero-subtitle">Pro Player &bull; Streamer &bull; Caster</p>
-            <p class="hero-game">
-                <span class="game-icon"><i class="fas fa-crosshairs"></i></span>
-                DELTA FORCE
-            </p>
-            <div class="hero-cta">
-                <a href="#about" class="btn btn-primary">Discover More</a>
-                <a href="#socials" class="btn btn-outline">Connect</a>
+            <div class="hero-image">
+                <img src="assets/olu-photo.jpg" alt="OLU - ONIC Esports Pro Player">
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">// WHO IS OLU</span>
-                <h2 class="section-title">About <span class="highlight">OLU</span></h2>
+    <section class="section-dark" id="about">
+        <div class="container about-container">
+            <div class="about-left">
+                <div class="about-photo-card">
+                    <img src="assets/olu-photo.jpg" alt="OLU" class="about-photo">
+                    <div class="skills-overlay">
+                        <h3>MY SKILLS</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>GAME SENSE</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>LEADERSHIP (IGL)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>STRATEGY</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>COMMUNICATION</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>ANALYSIS</span>
+                                <span>93%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="about-grid">
-                <div class="about-card about-main">
-                    <div class="card-glow"></div>
-                    <div class="about-icon">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                    <h3>The Commander</h3>
-                    <p>OLU, dikenal sebagai <strong>"Commander Halal"</strong>, adalah seorang pro player, streamer, dan caster game <strong>Delta Force</strong>. Saat ini bergabung dengan tim elit <strong>ONIC Esports</strong>, OLU membawa pengalaman dan skill yang luar biasa di setiap pertandingan.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-glow"></div>
-                    <div class="about-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Pro Player</h3>
-                    <p>Berpengalaman di kompetisi tingkat tinggi Delta Force bersama ONIC Esports.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-glow"></div>
-                    <div class="about-icon">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Streamer</h3>
-                    <p>Menghibur penonton dengan gameplay dan konten gaming berkualitas tinggi.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-glow"></div>
-                    <div class="about-icon">
-                        <i class="fas fa-microphone-alt"></i>
-                    </div>
-                    <h3>Caster</h3>
-                    <p>Memberikan analisis dan komentari profesional di turnamen Delta Force.</p>
+            <div class="about-right">
+                <h2>ABOUT ME !</h2>
+                <h3>I'm OLU, <span class="text-primary">Pro Player & Caster Delta Force</span></h3>
+                <p>OLU, dikenal sebagai <strong>"Commander Halal"</strong>, adalah seorang pro player, streamer, dan caster game Delta Force. Saat ini bergabung dengan tim elit ONIC Esports sebagai IGL (In-Game Leader) sekaligus analis tim.</p>
+                <p>Dengan pengalaman bermain di level kompetitif tinggi, OLU telah membawa timnya meraih prestasi di Delta Force National Championship (DFNC) Season 1 dan Season 2. Selain bertanding, OLU juga aktif sebagai streamer dan caster yang menghibur serta mengedukasi komunitas Delta Force.</p>
+                <div class="about-buttons">
+                    <a href="#achievements" class="btn btn-primary">ACHIEVEMENTS</a>
+                    <a href="https://saweria.co/ItzzzOLU" target="_blank" class="btn btn-outline">SUPPORT ME</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
-    <section class="section achievements" id="achievements">
+    <section class="section-light" id="achievements">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// TRACK RECORD</span>
-                <h2 class="section-title">Achievements</h2>
+                <h2>ACHIEVEMENTS</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <i class="fas fa-trophy"></i>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-badge">SEASON 1</div>
+                    <h3>DFNC Season 1</h3>
+                    <div class="achievement-rank">3<sup>rd</sup></div>
+                    <p>Juara 3 Delta Force National Championship Season 1 bersama ONIC Esports</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-badge s2">SEASON 2</div>
+                    <h3>DFNC Season 2</h3>
+                    <div class="achievement-rank">4<sup>th</sup></div>
+                    <p>Juara 4 Delta Force National Championship Season 2 bersama ONIC Esports</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon"><i class="fas fa-users"></i></div>
+                    <div class="achievement-badge team">TEAM</div>
+                    <h3>ONIC Esports</h3>
+                    <div class="achievement-team-logo">
+                        <img src="assets/onic-logo.png" alt="ONIC">
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-badge season1">SEASON 1</div>
-                        <h3>DFNC Season 1</h3>
-                        <div class="achievement-rank">
-                            <span class="rank-number">3<sup>rd</sup></span>
-                            <span class="rank-label">Place</span>
-                        </div>
-                        <p>Meraih posisi <strong>Juara 3</strong> di Delta Force National Championship Season 1 bersama ONIC Esports.</p>
-                        <div class="achievement-medal bronze">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-badge season2">SEASON 2</div>
-                        <h3>DFNC Season 2</h3>
-                        <div class="achievement-rank">
-                            <span class="rank-number">4<sup>th</sup></span>
-                            <span class="rank-label">Place</span>
-                        </div>
-                        <p>Meraih posisi <strong>Juara 4</strong> di Delta Force National Championship Season 2 bersama ONIC Esports.</p>
-                        <div class="achievement-medal silver-alt">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-shield-halved"></i></div>
-                    <div class="stat-value" data-target="2">0</div>
-                    <div class="stat-label">Tournament Seasons</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-users"></i></div>
-                    <div class="stat-value">ONIC</div>
-                    <div class="stat-label">Current Team</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-crosshairs"></i></div>
-                    <div class="stat-value">DF</div>
-                    <div class="stat-label">Main Game</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-star"></i></div>
-                    <div class="stat-value">TOP 4</div>
-                    <div class="stat-label">Best Finish</div>
+                    <p>Member aktif tim ONIC Esports divisi Delta Force</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Role Section -->
-    <section class="section role" id="role">
+    <section class="section-dark" id="role">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">// IN-GAME ROLE</span>
-                <h2 class="section-title">Team <span class="highlight">Role</span></h2>
+            <div class="section-header light">
+                <h2>TEAM ROLE</h2>
+                <div class="section-line"></div>
             </div>
             <div class="role-grid">
-                <div class="role-card role-igl">
-                    <div class="role-icon-wrapper">
-                        <div class="role-icon-bg"></div>
-                        <i class="fas fa-chess-king"></i>
-                    </div>
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-chess-king"></i></div>
                     <h3>IGL</h3>
-                    <p class="role-full">In-Game Leader</p>
-                    <p class="role-desc">Sebagai IGL, OLU bertanggung jawab memimpin tim dalam setiap pertandingan. Membuat keputusan strategi secara real-time, mengkoordinasikan pergerakan tim, dan memastikan eksekusi yang tepat di setiap round.</p>
-                    <div class="role-traits">
-                        <span class="trait">Leadership</span>
-                        <span class="trait">Communication</span>
-                        <span class="trait">Decision Making</span>
+                    <span class="role-subtitle">In-Game Leader</span>
+                    <p>Memimpin tim dalam setiap pertandingan, membuat keputusan strategi secara real-time, mengkoordinasikan pergerakan tim, dan memastikan eksekusi yang tepat.</p>
+                    <div class="role-tags">
+                        <span>Leadership</span>
+                        <span>Communication</span>
+                        <span>Decision Making</span>
                     </div>
                 </div>
-                <div class="role-card role-analyst">
-                    <div class="role-icon-wrapper">
-                        <div class="role-icon-bg"></div>
-                        <i class="fas fa-chart-line"></i>
-                    </div>
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>Analyst</h3>
-                    <p class="role-full">Team Analyst</p>
-                    <p class="role-desc">Selain memimpin di dalam game, OLU juga berperan sebagai analis tim. Menganalisis strategi lawan, mempelajari peta dan meta game, serta menyusun game plan untuk setiap pertandingan.</p>
-                    <div class="role-traits">
-                        <span class="trait">Strategy</span>
-                        <span class="trait">Game Sense</span>
-                        <span class="trait">Adaptability</span>
+                    <span class="role-subtitle">Team Analyst</span>
+                    <p>Menganalisis strategi lawan, mempelajari peta dan meta game, serta menyusun game plan untuk setiap pertandingan.</p>
+                    <div class="role-tags">
+                        <span>Strategy</span>
+                        <span>Game Sense</span>
+                        <span>Adaptability</span>
                     </div>
                 </div>
             </div>
@@ -231,52 +186,37 @@
     </section>
 
     <!-- Social Section -->
-    <section class="section socials" id="socials">
+    <section class="section-light" id="socials">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">// GET CONNECTED</span>
-                <h2 class="section-title">Follow <span class="highlight">OLU</span></h2>
+                <h2>CONNECT WITH ME</h2>
+                <div class="section-line"></div>
             </div>
             <div class="socials-grid">
-                <a href="https://www.instagram.com/itzzzolu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-card instagram">
-                    <div class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
+                <a href="https://www.instagram.com/itzzzolu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <i class="fab fa-instagram"></i>
                     <h3>Instagram</h3>
                     <p>@itzzzolu</p>
-                    <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://www.tiktok.com/@itzzzolu?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-card tiktok">
-                    <div class="social-icon">
-                        <i class="fab fa-tiktok"></i>
-                    </div>
+                <a href="https://www.tiktok.com/@itzzzolu?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <i class="fab fa-tiktok"></i>
                     <h3>TikTok</h3>
                     <p>@itzzzolu</p>
-                    <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://discord.com/invite/6esqP75z" target="_blank" rel="noopener noreferrer" class="social-card discord">
-                    <div class="social-icon">
-                        <i class="fab fa-discord"></i>
-                    </div>
+                <a href="https://discord.com/invite/6esqP75z" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <i class="fab fa-discord"></i>
                     <h3>Discord</h3>
                     <p>Join Server</p>
-                    <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://www.youtube.com/@itzzzOLu" target="_blank" rel="noopener noreferrer" class="social-card youtube">
-                    <div class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                    </div>
+                <a href="https://www.youtube.com/@itzzzOLu" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <i class="fab fa-youtube"></i>
                     <h3>YouTube</h3>
                     <p>@itzzzOLu</p>
-                    <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
-                <a href="https://saweria.co/ItzzzOLU" target="_blank" rel="noopener noreferrer" class="social-card saweria">
-                    <div class="social-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
+                <a href="https://saweria.co/ItzzzOLU" target="_blank" rel="noopener noreferrer" class="social-card">
+                    <i class="fas fa-heart"></i>
                     <h3>Saweria</h3>
                     <p>Support OLU</p>
-                    <span class="social-arrow"><i class="fas fa-arrow-right"></i></span>
                 </a>
             </div>
         </div>
@@ -287,20 +227,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-text">OLU</span>
-                    <span class="logo-tag">ONIC</span>
+                    <img src="assets/onic-logo.png" alt="ONIC" class="footer-logo-img">
+                    <span>OLU</span>
                 </div>
-                <p class="footer-text">"Commander Halal" &mdash; IGL &amp; Analyst | ONIC Esports | Delta Force</p>
+                <p>"Commander Halal" &mdash; IGL & Analyst | ONIC Esports | Delta Force</p>
                 <div class="footer-socials">
-                    <a href="https://www.instagram.com/itzzzolu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@itzzzolu?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://discord.com/invite/6esqP75z" target="_blank" rel="noopener noreferrer" aria-label="Discord"><i class="fab fa-discord"></i></a>
-                    <a href="https://www.youtube.com/@itzzzOLu" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://saweria.co/ItzzzOLU" target="_blank" rel="noopener noreferrer" aria-label="Saweria"><i class="fas fa-heart"></i></a>
+                    <a href="https://www.instagram.com/itzzzolu?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@itzzzolu?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://discord.com/invite/6esqP75z" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.youtube.com/@itzzzOLu" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://saweria.co/ItzzzOLU" target="_blank" aria-label="Saweria"><i class="fas fa-heart"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 OLU. All rights reserved.</p>
+                <p>&copy; 2025 OLU — ONIC Esports. All rights reserved.</p>
             </div>
         </div>
     </footer>
