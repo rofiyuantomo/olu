@@ -42,7 +42,7 @@ function initParticles() {
             this.speedX = (Math.random() - 0.5) * 0.5;
             this.speedY = (Math.random() - 0.5) * 0.5;
             this.opacity = Math.random() * 0.5 + 0.1;
-            this.color = Math.random() > 0.5 ? '0, 240, 255' : '168, 85, 247';
+            this.color = Math.random() > 0.5 ? '255, 215, 0' : '255, 170, 0';
         }
 
         update() {
@@ -76,7 +76,7 @@ function initParticles() {
                 if (dist < 150) {
                     const opacity = (1 - dist / 150) * 0.15;
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(0, 240, 255, ${opacity})`;
+                    ctx.strokeStyle = `rgba(255, 215, 0, ${opacity})`;
                     ctx.lineWidth = 0.5;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
