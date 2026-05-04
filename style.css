@@ -1,0 +1,1166 @@
+/* ============================================
+   OLU — Pro Player Profile Website
+   Theme: Dark Gaming / Cyberpunk
+   ============================================ */
+
+:root {
+    --primary: #00f0ff;
+    --primary-dark: #00b8c4;
+    --secondary: #ff3e6c;
+    --accent: #a855f7;
+    --bg-dark: #0a0a0f;
+    --bg-card: #12121a;
+    --bg-card-hover: #1a1a28;
+    --text: #e4e4e7;
+    --text-muted: #71717a;
+    --border: rgba(255, 255, 255, 0.06);
+    --glow: 0 0 20px rgba(0, 240, 255, 0.3);
+    --glow-secondary: 0 0 20px rgba(255, 62, 108, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
+    --gradient-hero: linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,0.8) 50%, rgba(10,10,15,1) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: 'Rajdhani', 'Inter', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================
+   Particle Canvas
+   ============================================ */
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ============================================
+   Navbar
+   ============================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+}
+
+.logo-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--bg-dark);
+    background: var(--secondary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(0, 240, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(255, 62, 108, 0.05) 0%, transparent 50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-hero);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 8px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    animation: fadeInDown 1s ease;
+}
+
+.hero-title {
+    margin-bottom: 16px;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-name {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 900;
+    letter-spacing: 12px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    text-shadow: none;
+    filter: drop-shadow(0 0 30px rgba(0, 240, 255, 0.3));
+}
+
+.hero-alias {
+    display: block;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--secondary);
+    letter-spacing: 6px;
+    margin-top: 8px;
+}
+
+.hero-subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-game {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease 0.6s both;
+}
+
+.game-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.8s both;
+}
+
+.btn {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--bg-dark);
+    box-shadow: var(--glow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.5);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    animation: fadeInUp 1s ease 1s both;
+}
+
+.scroll-indicator span {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   Section Common
+   ============================================ */
+.section {
+    position: relative;
+    z-index: 1;
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-tag {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--text);
+}
+
+.highlight {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   About Section
+   ============================================ */
+.about {
+    background:
+        radial-gradient(ellipse at 30% 0%, rgba(0, 240, 255, 0.03) 0%, transparent 50%),
+        var(--bg-dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.about-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 32px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.about-card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(0, 240, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 240, 255, 0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.about-card:hover .card-glow {
+    opacity: 1;
+}
+
+.about-main {
+    grid-column: 1 / -1;
+}
+
+.about-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 12px;
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ============================================
+   Achievements Section
+   ============================================ */
+.achievements {
+    background:
+        radial-gradient(ellipse at 70% 50%, rgba(168, 85, 247, 0.04) 0%, transparent 50%),
+        var(--bg-dark);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 64px;
+    padding-left: 60px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -48px;
+    top: 20px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-dark);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    color: var(--primary);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: rgba(0, 240, 255, 0.2);
+    transform: translateX(4px);
+}
+
+.timeline-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 4px 16px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+}
+
+.timeline-badge.season1 {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.timeline-badge.season2 {
+    background: rgba(168, 85, 247, 0.1);
+    color: var(--accent);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.timeline-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.achievement-rank {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.rank-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.rank-number sup {
+    font-size: 1rem;
+}
+
+.rank-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.achievement-medal {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 2rem;
+}
+
+.achievement-medal.bronze {
+    color: #cd7f32;
+}
+
+.achievement-medal.silver-alt {
+    color: #9ca3af;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.stat-card {
+    text-align: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 32px 16px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: rgba(0, 240, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.stat-icon {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.stat-value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ============================================
+   Role Section
+   ============================================ */
+.role {
+    background:
+        radial-gradient(ellipse at 50% 100%, rgba(255, 62, 108, 0.04) 0%, transparent 50%),
+        var(--bg-dark);
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.role-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.role-card:hover {
+    transform: translateY(-8px);
+}
+
+.role-igl:hover {
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 240, 255, 0.1);
+}
+
+.role-analyst:hover {
+    border-color: rgba(168, 85, 247, 0.3);
+    box-shadow: 0 20px 60px rgba(168, 85, 247, 0.1);
+}
+
+.role-icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-icon-bg {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.role-igl .role-icon-bg {
+    background: var(--primary);
+}
+
+.role-analyst .role-icon-bg {
+    background: var(--accent);
+}
+
+.role-icon-wrapper i {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.role-igl .role-icon-wrapper i {
+    color: var(--primary);
+}
+
+.role-analyst .role-icon-wrapper i {
+    color: var(--accent);
+}
+
+.role-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+}
+
+.role-full {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.role-desc {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.role-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.trait {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    transition: all 0.3s ease;
+}
+
+.role-igl:hover .trait {
+    border-color: rgba(0, 240, 255, 0.2);
+    color: var(--primary);
+}
+
+.role-analyst:hover .trait {
+    border-color: rgba(168, 85, 247, 0.2);
+    color: var(--accent);
+}
+
+/* ============================================
+   Social Section
+   ============================================ */
+.socials {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(0, 240, 255, 0.04) 0%, transparent 40%),
+        var(--bg-dark);
+}
+
+.socials-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.social-card {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+}
+
+.social-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+.social-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.social-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.social-arrow {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: var(--text-muted);
+}
+
+.social-card:hover .social-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Instagram */
+.social-card.instagram .social-icon {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.social-card.instagram:hover {
+    border-color: #e6683c;
+    box-shadow: 0 20px 40px rgba(230, 104, 60, 0.2);
+}
+
+/* TikTok */
+.social-card.tiktok .social-icon {
+    background: #010101;
+    color: #25f4ee;
+    border: 2px solid #25f4ee;
+}
+
+.social-card.tiktok:hover {
+    border-color: #25f4ee;
+    box-shadow: 0 20px 40px rgba(37, 244, 238, 0.2);
+}
+
+/* Discord */
+.social-card.discord .social-icon {
+    background: #5865F2;
+    color: white;
+}
+
+.social-card.discord:hover {
+    border-color: #5865F2;
+    box-shadow: 0 20px 40px rgba(88, 101, 242, 0.2);
+}
+
+/* YouTube */
+.social-card.youtube .social-icon {
+    background: #FF0000;
+    color: white;
+}
+
+.social-card.youtube:hover {
+    border-color: #FF0000;
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.2);
+}
+
+/* Saweria */
+.social-card.saweria .social-icon {
+    background: linear-gradient(135deg, #f59e0b, #f97316);
+    color: white;
+}
+
+.social-card.saweria:hover {
+    border-color: #f59e0b;
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.2);
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 48px 0 24px;
+    background: rgba(10, 10, 15, 0.95);
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scaleY(0.6);
+        transform-origin: top;
+    }
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* Scroll reveal */
+.about-card,
+.timeline-item,
+.stat-card,
+.role-card,
+.social-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.about-card.visible,
+.timeline-item.visible,
+.stat-card.visible,
+.role-card.visible,
+.social-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 1024px) {
+    .socials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-main {
+        grid-column: 1;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .role-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .socials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeline {
+        padding-left: 48px;
+    }
+
+    .timeline::before {
+        left: 16px;
+    }
+
+    .timeline-marker {
+        left: -40px;
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .socials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .timeline-content {
+        padding: 24px;
+    }
+
+    .rank-number {
+        font-size: 2.5rem;
+    }
+
+    .role-card {
+        padding: 32px 24px;
+    }
+}
