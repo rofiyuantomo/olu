@@ -183,7 +183,7 @@ navLinksEl.querySelectorAll('a').forEach(link => {
 
 // Scroll reveal
 const revealElements = document.querySelectorAll(
-    '.achievement-card, .role-card, .social-card, .about-photo-card, .about-right'
+    '.achievement-card, .role-card, .social-card, .about-photo-card, .about-right, .weapon-card'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {

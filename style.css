@@ -105,7 +105,7 @@ a {
     width: 36px;
     height: 36px;
     object-fit: contain;
-    filter: brightness(3);
+    filter: brightness(5) invert(1) hue-rotate(180deg);
 }
 
 .logo-text {
@@ -211,7 +211,7 @@ a {
 }
 
 .hero-logo-small.df {
-    filter: brightness(2) invert(1) drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+    filter: hue-rotate(90deg) brightness(1.3) drop-shadow(0 0 8px rgba(0, 255, 100, 0.3));
 }
 
 .hero-logo-x {
@@ -315,6 +315,13 @@ a {
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     object-fit: cover;
     border: 1px solid var(--border-subtle);
+}
+
+.hero-image.no-frame img {
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
 }
 
 /* ============================================
@@ -758,6 +765,115 @@ a {
 }
 
 /* ============================================
+   Loadout Section
+   ============================================ */
+.loadout-category {
+    margin-bottom: 48px;
+}
+
+.loadout-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.category-title i {
+    font-size: 0.9rem;
+}
+
+.loadout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.weapon-card {
+    background: var(--dark-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.weapon-card:hover {
+    border-color: rgba(255, 215, 0, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.06);
+}
+
+.weapon-img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text-muted-light);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.weapon-img-placeholder i {
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.weapon-img-placeholder span {
+    opacity: 0.4;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.weapon-card img.weapon-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.weapon-info {
+    padding: 16px;
+}
+
+.weapon-info h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.weapon-code {
+    font-size: 0.8rem;
+    color: var(--text-muted-light);
+}
+
+.weapon-code code {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
    Footer
    ============================================ */
 .footer {
@@ -866,7 +982,8 @@ a {
 .role-card,
 .social-card,
 .about-photo-card,
-.about-right {
+.about-right,
+.weapon-card {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -876,7 +993,8 @@ a {
 .role-card.visible,
 .social-card.visible,
 .about-photo-card.visible,
-.about-right.visible {
+.about-right.visible,
+.weapon-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -925,6 +1043,10 @@ a {
     .socials-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .loadout-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -969,6 +1091,10 @@ a {
 
     .socials-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .loadout-grid {
+        grid-template-columns: 1fr;
     }
 
     .about-left {
