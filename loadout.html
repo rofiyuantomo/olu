@@ -38,211 +38,50 @@
     <canvas id="particles"></canvas>
 
     <!-- Loadout Section -->
-    <section class="section-light page-section" id="loadout">
+    <section class="section-dark page-section" id="loadout">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header light">
                 <h2>WEAPON LOADOUT</h2>
                 <div class="section-line"></div>
+                <p class="section-subtitle">Klik senjata untuk melihat detail loadout. Admin bisa menambah/mengurangi kode loadout.</p>
             </div>
 
-            <!-- Assault Rifle -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Assault Rifle</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Admin Toggle -->
+            <div class="admin-toggle-container">
+                <button class="admin-toggle-btn" id="adminToggle">
+                    <i class="fas fa-lock"></i> ADMIN MODE
+                </button>
             </div>
 
-            <!-- Submachine Gun -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Submachine Gun</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
+            <div id="loadoutContainer">
+                <!-- Weapons will be rendered by JavaScript -->
             </div>
-
-            <!-- Shotgun -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Shotgun</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Marksman Rifle -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Marksman Rifle</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Light Machine Gun -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Light Machine Gun</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sniper Rifle -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Sniper Rifle</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Special Weapon -->
-            <div class="loadout-category">
-                <h3 class="category-title"><i class="fas fa-crosshairs"></i> Special Weapon</h3>
-                <div class="loadout-grid">
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                    <div class="weapon-card">
-                        <div class="weapon-img-placeholder"><i class="fas fa-image"></i><span>Foto Senjata</span></div>
-                        <div class="weapon-info">
-                            <h4>Weapon Name</h4>
-                            <p class="weapon-code">Loadout code: <code>TBA</code></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
+
+    <!-- Weapon Detail Modal -->
+    <div class="modal-overlay" id="weaponModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <div class="modal-weapon-img" id="modalImg"></div>
+                <div class="modal-weapon-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalName"></h2>
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <h3><i class="fas fa-code"></i> Loadout Codes</h3>
+                <div id="modalLoadouts"></div>
+                <div class="admin-only" id="addLoadoutSection" style="display:none;">
+                    <button class="btn-add-loadout" id="addLoadoutBtn">
+                        <i class="fas fa-plus"></i> Tambah Loadout Code
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -268,5 +107,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="loadout.js"></script>
 </body>
 </html>
