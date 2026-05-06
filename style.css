@@ -177,7 +177,7 @@ a {
     background: transparent;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     z-index: 1;
 }
 
@@ -186,7 +186,7 @@ a {
     margin: 0 auto;
     padding: 100px 24px 0;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     gap: 40px;
     position: relative;
@@ -197,7 +197,6 @@ a {
 .hero-text {
     flex: 1;
     max-width: 580px;
-    padding-bottom: 80px;
 }
 
 .hero-logos {
@@ -345,9 +344,9 @@ a {
 .hero-image.no-frame {
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
-    max-width: 480px;
-    overflow: hidden;
+    justify-content: center;
+    max-width: 520px;
+    overflow: visible;
     align-self: flex-end;
 }
 
@@ -356,10 +355,9 @@ a {
     box-shadow: none;
     border: none;
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
-    width: 120%;
+    width: 130%;
     max-width: none;
-    object-fit: cover;
-    object-position: top center;
+    object-fit: contain;
     display: block;
 }
 
@@ -869,8 +867,8 @@ a {
 .admin-toggle-btn.active { background: rgba(255,215,0,0.1); border-color: var(--primary); color: var(--primary); }
 
 .weapon-card {
-    background: rgba(20, 20, 40, 0.9);
-    border: 1px solid rgba(255, 215, 0, 0.15);
+    background: rgba(25, 25, 50, 0.95);
+    border: 1px solid rgba(255, 215, 0, 0.25);
     border-radius: 12px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -921,7 +919,7 @@ a {
 .weapon-img-placeholder {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 215, 0, 0.04);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -932,12 +930,13 @@ a {
 }
 
 .weapon-img-placeholder i {
-    font-size: 2rem;
-    opacity: 0.3;
+    font-size: 2.5rem;
+    opacity: 0.5;
+    color: var(--primary);
 }
 
 .weapon-img-placeholder span {
-    opacity: 0.4;
+    opacity: 0.6;
     font-size: 0.75rem;
     letter-spacing: 1px;
 }
