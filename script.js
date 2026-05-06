@@ -142,6 +142,32 @@ if (navbar) {
     });
 }
 
+// Active nav link on scroll (only for pages with sections)
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+if (sections.length > 1) {
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 150;
+
+        sections.forEach(section => {
+            const id = section.getAttribute('id');
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+
+            if (scrollY >= top && scrollY < top + height) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    link.classList.remove('active');
+                    if (href === '#' + id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    });
+}
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const navLinksEl = document.getElementById('navLinks');
@@ -205,7 +231,7 @@ if (skillsOverlay) {
     skillObserver.observe(skillsOverlay);
 }
 
-// Smooth scroll for anchor links only (not page links)
+// Smooth scroll for same-page anchor links only
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
