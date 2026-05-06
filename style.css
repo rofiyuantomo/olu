@@ -162,6 +162,12 @@ a {
     cursor: pointer;
 }
 
+/* Page section top padding for non-hero pages */
+.page-section {
+    padding-top: 100px !important;
+    min-height: calc(100vh - 200px);
+}
+
 /* ============================================
    Hero Section (Rubrash-style)
    ============================================ */
