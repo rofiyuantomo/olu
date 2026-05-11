@@ -6,70 +6,70 @@
    ============================================ */
 
 // Data version — increment this when DEFAULT_WEAPONS changes to force localStorage reset
-const DATA_VERSION = 2;
+const DATA_VERSION = 3;
 
 // Default weapon data
 const DEFAULT_WEAPONS = [
     // Assault Rifle
     { id: 'ar1', category: 'Assault Rifle', name: 'AKM Assault Rifle', description: 'AKM Assault Rifle — Warfare loadout', image: 'assets/weapon-images/ar/akm.png', loadouts: [
-        { label: 'Warfare', code: '6K0BSE407KC16VJTG13QB', detail: 'Loadout Warfare untuk AKM Assault Rifle.' }
+        { label: 'Warfare', code: 'AKM Assault Rifle-Warfare-6K0BSE407KC16VJTG13QB', detail: 'Loadout Warfare untuk AKM Assault Rifle.' }
     ] },
     { id: 'ar2', category: 'Assault Rifle', name: 'AR-57 Assault Rifle', description: 'AR-57 Assault Rifle — Warfare loadout', image: 'assets/weapon-images/ar/ar-57.png', loadouts: [
-        { label: 'Warfare', code: '6K0BSJ007KC16VJTG13QB', detail: 'Loadout Warfare untuk AR-57 Assault Rifle.' }
+        { label: 'Warfare', code: 'AR-57 Assault Rifle-Warfare-6K0BSJ007KC16VJTG13QB', detail: 'Loadout Warfare untuk AR-57 Assault Rifle.' }
     ] },
     { id: 'ar3', category: 'Assault Rifle', name: 'AK-12 Assault Rifle', description: 'AK-12 Assault Rifle — Warfare loadout', image: 'assets/weapon-images/ar/ak-12.png', loadouts: [
-        { label: 'Warfare', code: '6K0BSOG07KC16VJTG13QB', detail: 'Loadout Warfare untuk AK-12 Assault Rifle.' }
+        { label: 'Warfare', code: 'AK-12 Assault Rifle-Warfare-6K0BSOG07KC16VJTG13QB', detail: 'Loadout Warfare untuk AK-12 Assault Rifle.' }
     ] },
     // SMG
     { id: 'smg1', category: 'Submachine Gun', name: 'MP7 Submachine Gun', description: 'MP7 Submachine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BSRG07KC16VJTG13QB', detail: 'Loadout Warfare untuk MP7 Submachine Gun.' }
+        { label: 'Warfare', code: 'MP7 Submachine Gun-Warfare-6K0BSRG07KC16VJTG13QB', detail: 'Loadout Warfare untuk MP7 Submachine Gun.' }
     ] },
     { id: 'smg2', category: 'Submachine Gun', name: 'QCQ171 Submachine Gun', description: 'QCQ171 Submachine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0ATEK07KC16VJTG13QB', detail: 'Loadout Warfare untuk QCQ171 Submachine Gun.' }
+        { label: 'Warfare', code: 'QCQ171 Submachine Gun-Warfare-6K0ATEK07KC16VJTG13QB', detail: 'Loadout Warfare untuk QCQ171 Submachine Gun.' }
     ] },
     { id: 'smg3', category: 'Submachine Gun', name: 'MK4 Submachine Gun', description: 'MK4 Submachine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BTLS07KC16VJTG13QB', detail: 'Loadout Warfare untuk MK4 Submachine Gun.' }
+        { label: 'Warfare', code: 'MK4 Submachine Gun-Warfare-6K0BTLS07KC16VJTG13QB', detail: 'Loadout Warfare untuk MK4 Submachine Gun.' }
     ] },
     // LMG
     { id: 'lmg1', category: 'Light Machine Gun', name: 'QJB201 Light Machine Gun', description: 'QJB201 Light Machine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6JUG2Q407KC16VJTG13QB', detail: 'Loadout Warfare untuk QJB201 Light Machine Gun.' }
+        { label: 'Warfare', code: 'QJB201 Light Machine Gun-Warfare-6JUG2Q407KC16VJTG13QB', detail: 'Loadout Warfare untuk QJB201 Light Machine Gun.' }
     ] },
     { id: 'lmg2', category: 'Light Machine Gun', name: 'PKM General Machine Gun', description: 'PKM General Machine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6JVDVF807KC16VJTG13QB', detail: 'Loadout Warfare untuk PKM General Machine Gun.' }
+        { label: 'Warfare', code: 'PKM General Machine Gun-Warfare-6JVDVF807KC16VJTG13QB', detail: 'Loadout Warfare untuk PKM General Machine Gun.' }
     ] },
     { id: 'lmg3', category: 'Light Machine Gun', name: 'M249 Light Machine Gun', description: 'M249 Light Machine Gun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BUD007KC16VJTG13QB', detail: 'Loadout Warfare untuk M249 Light Machine Gun.' }
+        { label: 'Warfare', code: 'M249 Light Machine Gun-Warfare-6K0BUD007KC16VJTG13QB', detail: 'Loadout Warfare untuk M249 Light Machine Gun.' }
     ] },
     // DMR
     { id: 'mr1', category: 'Marksman Rifle', name: 'Mini-14 Marksman Rifle', description: 'Mini-14 Marksman Rifle — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BUG007KC16VJTG13QB', detail: 'Loadout Warfare untuk Mini-14 Marksman Rifle.' }
+        { label: 'Warfare', code: 'Mini-14 Marksman Rifle-Warfare-6K0BUG007KC16VJTG13QB', detail: 'Loadout Warfare untuk Mini-14 Marksman Rifle.' }
     ] },
     { id: 'mr2', category: 'Marksman Rifle', name: 'SR-25 Marksman Rifle', description: 'SR-25 Marksman Rifle — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BUOC07KC16VJTG13QB', detail: 'Loadout Warfare untuk SR-25 Marksman Rifle.' }
+        { label: 'Warfare', code: 'SR-25 Marksman Rifle-Warfare-6K0BUOC07KC16VJTG13QB', detail: 'Loadout Warfare untuk SR-25 Marksman Rifle.' }
     ] },
     // SR
     { id: 'sr1', category: 'Sniper Rifle', name: 'R93 Sniper Rifle', description: 'R93 Sniper Rifle — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BUSC07KC16VJTG13QB', detail: 'Loadout Warfare untuk R93 Sniper Rifle.' }
+        { label: 'Warfare', code: 'R93 Sniper Rifle-Warfare-6K0BUSC07KC16VJTG13QB', detail: 'Loadout Warfare untuk R93 Sniper Rifle.' }
     ] },
     { id: 'sr2', category: 'Sniper Rifle', name: 'AWM Sniper Rifle', description: 'AWM Sniper Rifle — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BUUS07KC16VJTG13QB', detail: 'Loadout Warfare untuk AWM Sniper Rifle.' }
+        { label: 'Warfare', code: 'AWM Sniper Rifle-Warfare-6K0BUUS07KC16VJTG13QB', detail: 'Loadout Warfare untuk AWM Sniper Rifle.' }
     ] },
     { id: 'sr3', category: 'Sniper Rifle', name: 'M82 Sniper Rifle', description: 'M82 Sniper Rifle — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BV0C07KC16VJTG13QB', detail: 'Loadout Warfare untuk M82 Sniper Rifle.' }
+        { label: 'Warfare', code: 'M82 Sniper Rifle-Warfare-6K0BV0C07KC16VJTG13QB', detail: 'Loadout Warfare untuk M82 Sniper Rifle.' }
     ] },
     // Special
     { id: 'sp1', category: 'Special Weapon', name: 'Compound Bow', description: 'Compound Bow — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K06DTC07KC16VJTG13QB', detail: 'Loadout Warfare untuk Compound Bow.' }
+        { label: 'Warfare', code: 'Compound Bow-Warfare-6K06DTC07KC16VJTG13QB', detail: 'Loadout Warfare untuk Compound Bow.' }
     ] },
     // Shotgun
     { id: 'sg1', category: 'Shotgun', name: 'S12K Shotgun', description: 'S12K Shotgun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6JRRALS07KC16VJTG13QB', detail: 'Loadout Warfare untuk S12K Shotgun.' }
+        { label: 'Warfare', code: 'S12K Shotgun-Warfare-6JRRALS07KC16VJTG13QB', detail: 'Loadout Warfare untuk S12K Shotgun.' }
     ] },
     { id: 'sg2', category: 'Shotgun', name: 'FS-12 Shotgun', description: 'FS-12 Shotgun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6K0BV7007KC16VJTG13QB', detail: 'Loadout Warfare untuk FS-12 Shotgun.' }
+        { label: 'Warfare', code: 'FS-12 Shotgun-Warfare-6K0BV7007KC16VJTG13QB', detail: 'Loadout Warfare untuk FS-12 Shotgun.' }
     ] },
     { id: 'sg3', category: 'Shotgun', name: 'M870 Shotgun', description: 'M870 Shotgun — Warfare loadout', image: '', loadouts: [
-        { label: 'Warfare', code: '6JUFVV407KC16VJTG13QB', detail: 'Loadout Warfare untuk M870 Shotgun.' }
+        { label: 'Warfare', code: 'M870 Shotgun-Warfare-6JUFVV407KC16VJTG13QB', detail: 'Loadout Warfare untuk M870 Shotgun.' }
     ] },
 ];
 
