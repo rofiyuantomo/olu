@@ -119,11 +119,21 @@ function groupByCategory(weaponList) {
 }
 
 // Render all weapon categories and cards
-function renderLoadout() {
+function renderLoadout(searchQuery) {
     const container = document.getElementById('loadoutContainer');
     if (!container) return;
 
-    const groups = groupByCategory(weapons);
+    const query = (searchQuery || '').toLowerCase().trim();
+    const filtered = query
+        ? weapons.filter(w => w.name.toLowerCase().includes(query) || w.category.toLowerCase().includes(query))
+        : weapons;
+
+    if (query && filtered.length === 0) {
+        container.innerHTML = `<div class="no-results"><i class="fas fa-search"></i>Tidak ditemukan senjata untuk "${searchQuery.trim()}"</div>`;
+        return;
+    }
+
+    const groups = groupByCategory(filtered);
     let html = '';
 
     for (const [category, items] of Object.entries(groups)) {
@@ -365,6 +375,29 @@ function deleteWeapon(weaponId) {
 document.addEventListener('DOMContentLoaded', () => {
     loadWeapons();
     renderLoadout();
+
+    // Search functionality
+    const searchInput = document.getElementById('weaponSearch');
+    const searchClear = document.getElementById('searchClear');
+    if (searchInput) {
+        let debounceTimer;
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const query = searchInput.value;
+                renderLoadout(query);
+                if (searchClear) searchClear.style.display = query.trim() ? 'block' : 'none';
+            }, 200);
+        });
+    }
+    if (searchClear) {
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            searchClear.style.display = 'none';
+            renderLoadout();
+            searchInput.focus();
+        });
+    }
 
     // Modal close
     const closeBtn = document.getElementById('modalClose');
