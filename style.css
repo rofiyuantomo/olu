@@ -1618,7 +1618,59 @@ a {
     }
 
     .loadout-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .weapon-img-area {
+        height: 110px;
+        padding: 8px;
+    }
+
+    .weapon-info {
+        padding: 10px 10px;
+    }
+
+    .weapon-info h4 {
+        font-size: 0.65rem;
+        letter-spacing: 0.5px;
+    }
+
+    .weapon-loadout-count {
+        font-size: 0.65rem;
+    }
+
+    .weapon-img-placeholder i {
+        font-size: 1.8rem;
+    }
+
+    .weapon-card {
+        border-radius: 8px;
+    }
+
+    .category-title {
+        font-size: 0.85rem;
+    }
+
+    .loadout-category {
+        margin-bottom: 28px;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 85vh;
+    }
+
+    .modal-header {
+        padding: 16px 16px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .modal-weapon-img {
+        width: 100%;
+        height: 140px;
     }
 
     .about-left {
@@ -1650,5 +1702,18 @@ a {
     .about-buttons {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .weapon-img-area {
+        height: 90px;
+        padding: 6px;
+    }
+
+    .weapon-info {
+        padding: 8px;
+    }
+
+    .weapon-info h4 {
+        font-size: 0.6rem;
     }
 }
