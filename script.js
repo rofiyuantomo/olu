@@ -194,7 +194,7 @@ if (navToggle && navLinksEl) {
 
 // Scroll reveal
 const revealElements = document.querySelectorAll(
-    '.achievement-card, .role-card, .social-card, .about-photo-card, .about-right, .weapon-card'
+    '.achievement-card, .role-card, .social-card, .about-photo-card, .about-right, .tactical-card, .weapon-card'
 );
 
 if (revealElements.length > 0) {

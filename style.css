@@ -217,7 +217,7 @@ a {
 }
 
 .hero-logo-small.df {
-    filter: hue-rotate(90deg) brightness(1.3) drop-shadow(0 0 8px rgba(0, 255, 100, 0.3));
+    filter: saturate(1.25) brightness(1.05) drop-shadow(0 0 10px rgba(19, 236, 151, 0.35));
 }
 
 .hero-logo-x {
@@ -308,24 +308,6 @@ a {
     transform: translateY(-2px);
 }
 
-.hero-buttons-secondary {
-    margin-top: 12px;
-}
-
-.btn-ghost {
-    background: transparent;
-    color: var(--text-muted);
-    border-color: rgba(255,255,255,0.1);
-    font-size: 0.75rem;
-    padding: 10px 24px;
-}
-
-.btn-ghost:hover {
-    color: var(--primary);
-    border-color: var(--primary);
-    transform: translateY(-2px);
-}
-
 .hero-image {
     flex: 1;
     max-width: 500px;
@@ -387,6 +369,120 @@ a {
     background: var(--primary);
     margin: 0 auto;
     border-radius: 2px;
+}
+
+/* ============================================
+   Tactical Hub Section
+   ============================================ */
+.tactical-section {
+    padding-top: 90px;
+}
+
+.tactical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.tactical-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(19, 236, 151, 0.06)),
+        var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tactical-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255, 215, 0, 0.16), transparent 34%),
+        linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.28) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tactical-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.tactical-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 215, 0, 0.35);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.tactical-card:hover::before {
+    opacity: 1;
+}
+
+.tactical-kicker {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--primary);
+}
+
+.tactical-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0 22px;
+    border-radius: 8px;
+    background: rgba(255, 215, 0, 0.1);
+    border: 1px solid rgba(255, 215, 0, 0.24);
+    color: var(--primary);
+    font-size: 1.55rem;
+}
+
+.tactical-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.tactical-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+    max-width: 460px;
+    margin-bottom: 26px;
+}
+
+.tactical-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.tactical-link i {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.tactical-card:hover .tactical-link i {
+    transform: translateX(4px);
 }
 
 /* ============================================
@@ -842,30 +938,6 @@ a {
     margin-top: 12px;
 }
 
-.admin-toggle-container {
-    text-align: right;
-    margin-bottom: 24px;
-}
-
-.admin-toggle-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--text-muted);
-    padding: 8px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.admin-toggle-btn:hover { border-color: var(--primary); color: var(--primary); }
-.admin-toggle-btn.active { background: rgba(255,215,0,0.1); border-color: var(--primary); color: var(--primary); }
-
 .weapon-card {
     background: rgba(25, 25, 50, 0.95);
     border: 1px solid rgba(255, 215, 0, 0.25);
@@ -905,15 +977,29 @@ a {
 
 .weapon-img-area {
     width: 100%;
-    height: 160px;
+    height: 180px;
     overflow: hidden;
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
 }
 
 .weapon-card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.18);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease;
+}
+
+.weapon-card:hover .weapon-card-img {
+    transform: scale(1.02);
 }
 
 .weapon-img-placeholder {
@@ -1407,6 +1493,7 @@ a {
 .social-card,
 .about-photo-card,
 .about-right,
+.tactical-card,
 .weapon-card {
     opacity: 0;
     transform: translateY(30px);
@@ -1418,6 +1505,7 @@ a {
 .social-card.visible,
 .about-photo-card.visible,
 .about-right.visible,
+.tactical-card.visible,
 .weapon-card.visible {
     opacity: 1;
     transform: translateY(0);
@@ -1464,6 +1552,10 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .tactical-grid {
+        grid-template-columns: 1fr;
+    }
+
     .socials-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -1501,6 +1593,11 @@ a {
         padding-top: 110px;
     }
 
+    .tactical-card {
+        min-height: 260px;
+        padding: 26px;
+    }
+
     .hero-text h1 {
         font-size: 2.4rem;
     }
@@ -1535,6 +1632,16 @@ a {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .tactical-card {
+        padding: 22px;
+    }
+
+    .tactical-icon {
+        width: 56px;
+        height: 56px;
+        margin: 26px 0 18px;
     }
 
     .about-buttons {

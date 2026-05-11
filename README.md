@@ -32,6 +32,6 @@ Simply open `index.html` in a web browser, or deploy to any static hosting servi
 
 - [Instagram](https://www.instagram.com/itzzzolu)
 - [TikTok](https://www.tiktok.com/@itzzzolu)
-- [Discord](https://discord.com/invite/6esqP75z)
+- [Discord](https://discord.com/invite/KTsxcJ9U8P)
 - [YouTube](https://www.youtube.com/@itzzzOLu)
 - [Saweria](https://saweria.co/ItzzzOLU)
