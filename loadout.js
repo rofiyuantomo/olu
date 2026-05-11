@@ -5,6 +5,9 @@
    Data stored in localStorage.
    ============================================ */
 
+// Data version — increment this when DEFAULT_WEAPONS changes to force localStorage reset
+const DATA_VERSION = 2;
+
 // Default weapon data
 const DEFAULT_WEAPONS = [
     // Assault Rifle
@@ -86,8 +89,9 @@ let currentWeapon = null;
 
 // Load data from localStorage or use defaults
 function loadWeapons() {
+    const savedVersion = localStorage.getItem('olu_weapons_version');
     const saved = localStorage.getItem('olu_weapons');
-    if (saved) {
+    if (saved && savedVersion === String(DATA_VERSION)) {
         try {
             weapons = JSON.parse(saved);
         } catch (e) {
@@ -95,11 +99,13 @@ function loadWeapons() {
         }
     } else {
         weapons = JSON.parse(JSON.stringify(DEFAULT_WEAPONS));
+        localStorage.removeItem('olu_weapons');
     }
 }
 
 function saveWeapons() {
     localStorage.setItem('olu_weapons', JSON.stringify(weapons));
+    localStorage.setItem('olu_weapons_version', String(DATA_VERSION));
 }
 
 // Group weapons by category
