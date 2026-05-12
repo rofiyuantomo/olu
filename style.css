@@ -1756,117 +1756,233 @@ a {
         width: 100%;
     }
 
+    .container {
+        padding: 0 16px;
+    }
+
     .section-light,
     .section-dark {
-        padding: 60px 0;
+        padding: 40px 0;
+    }
+
+    .section-header {
+        margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+
+    .section-subtitle {
+        font-size: 0.78rem;
+    }
+
+    .section-line {
+        width: 36px;
     }
 
     .about-photo {
-        height: 220px;
+        height: 180px;
     }
 
     .skills-overlay {
-        padding: 16px;
+        padding: 14px;
     }
 
     .skills-overlay h3 {
-        font-size: 0.75rem;
+        font-size: 0.68rem;
         letter-spacing: 2px;
-        margin-bottom: 14px;
-    }
-
-    .skill-item {
         margin-bottom: 10px;
     }
 
+    .skill-item {
+        margin-bottom: 8px;
+    }
+
     .skill-info span {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
     }
 
     .skill-bar {
-        height: 6px;
+        height: 5px;
     }
 
     .about-left {
-        max-width: 320px;
+        max-width: 260px;
         margin: 0 auto;
     }
 
     .about-right h2 {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         letter-spacing: 2px;
     }
 
     .about-right h3 {
-        font-size: 0.9rem;
-        margin-bottom: 16px;
-    }
-
-    .about-right p {
-        font-size: 0.85rem;
-        line-height: 1.7;
+        font-size: 0.8rem;
         margin-bottom: 12px;
     }
 
-    .section-header h2 {
-        font-size: 1.6rem;
+    .about-right p {
+        font-size: 0.78rem;
+        line-height: 1.6;
+        margin-bottom: 8px;
     }
 
-    .section-subtitle {
-        font-size: 0.85rem;
+    .about-buttons {
+        margin-top: 16px;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 10px 22px;
+        font-size: 0.72rem;
     }
 
     .achievement-card {
-        padding: 28px 20px;
+        padding: 20px 16px;
+        border-radius: 12px;
     }
 
     .achievement-icon {
-        width: 48px;
-        height: 48px;
-        font-size: 1.1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .achievement-badge {
+        font-size: 0.6rem;
+        padding: 3px 12px;
+        margin-bottom: 8px;
     }
 
     .achievement-rank {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
+        margin-bottom: 8px;
     }
 
     .achievement-card h3 {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
+        margin-bottom: 6px;
     }
 
     .achievement-card p {
-        font-size: 0.8rem;
+        font-size: 0.72rem;
+        line-height: 1.5;
     }
 
     .achievement-team-logo {
-        width: 55px;
-        height: 55px;
+        width: 44px;
+        height: 44px;
+        margin-bottom: 8px;
+    }
+
+    .role-grid {
+        gap: 16px;
     }
 
     .role-card {
-        padding: 28px 20px;
+        padding: 20px 16px;
+        border-radius: 12px;
     }
 
     .role-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 12px;
     }
 
     .role-card h3 {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        margin-bottom: 2px;
+    }
+
+    .role-subtitle {
+        font-size: 0.62rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
     }
 
     .role-card p {
-        font-size: 0.82rem;
+        font-size: 0.72rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .role-tags {
+        gap: 5px;
+    }
+
+    .role-tags span {
+        font-size: 0.6rem;
+        padding: 4px 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .socials-grid {
+        gap: 12px;
     }
 
     .social-card {
-        padding: 24px 16px;
+        padding: 18px 10px;
+        border-radius: 12px;
+    }
+
+    .social-card i {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
     }
 
     .social-card h3 {
-        font-size: 0.8rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
+
+    .social-card p {
+        font-size: 0.62rem;
+    }
+
+    .tactical-card {
+        min-height: 200px;
+        padding: 20px;
+    }
+
+    .tactical-kicker {
+        font-size: 0.6rem;
+    }
+
+    .tactical-icon {
+        width: 44px;
+        height: 44px;
+        margin: 16px 0 12px;
+        font-size: 1.1rem;
+    }
+
+    .tactical-card h3 {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+
+    .tactical-card p {
+        font-size: 0.78rem;
+        margin-bottom: 14px;
+        line-height: 1.5;
+    }
+
+    .tactical-link {
+        font-size: 0.68rem;
+    }
+
+    .footer-content {
+        padding: 30px 0;
+    }
+
+    .footer-content p {
+        font-size: 0.72rem;
     }
 }
 
@@ -1882,37 +1998,15 @@ a {
 
     .section-light,
     .section-dark {
-        padding: 44px 0;
+        padding: 32px 0;
     }
 
-    .tactical-card {
-        padding: 20px;
-        min-height: 200px;
+    .section-header {
+        margin-bottom: 20px;
     }
 
-    .tactical-icon {
-        width: 48px;
-        height: 48px;
-        margin: 18px 0 14px;
-        font-size: 1.2rem;
-    }
-
-    .tactical-kicker {
-        font-size: 0.62rem;
-    }
-
-    .tactical-card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 8px;
-    }
-
-    .tactical-card p {
-        font-size: 0.82rem;
-        margin-bottom: 16px;
-    }
-
-    .tactical-link {
-        font-size: 0.72rem;
+    .section-header h2 {
+        font-size: 1rem;
     }
 
     .about-buttons {
@@ -1921,31 +2015,131 @@ a {
     }
 
     .about-photo {
-        height: 180px;
+        height: 150px;
     }
 
     .about-left {
-        max-width: 280px;
+        max-width: 240px;
     }
 
     .about-right h2 {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 
     .about-right h3 {
-        font-size: 0.82rem;
+        font-size: 0.75rem;
     }
 
     .about-right p {
-        font-size: 0.8rem;
-    }
-
-    .section-header h2 {
-        font-size: 1.3rem;
+        font-size: 0.72rem;
     }
 
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1rem;
+    }
+
+    .hero-tagline {
+        font-size: 0.72rem;
+    }
+
+    .tactical-card {
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .tactical-icon {
+        width: 36px;
+        height: 36px;
+        margin: 10px 0 8px;
+        font-size: 0.95rem;
+    }
+
+    .tactical-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .tactical-card p {
+        font-size: 0.7rem;
+        margin-bottom: 10px;
+    }
+
+    .role-card {
+        padding: 16px 12px;
+    }
+
+    .role-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .role-card h3 {
+        font-size: 0.78rem;
+    }
+
+    .role-subtitle {
+        font-size: 0.55rem;
+        margin-bottom: 8px;
+    }
+
+    .role-card p {
+        font-size: 0.65rem;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .role-tags span {
+        font-size: 0.52rem;
+        padding: 3px 8px;
+    }
+
+    .social-card {
+        padding: 14px 8px;
+    }
+
+    .social-card i {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+
+    .social-card h3 {
+        font-size: 0.6rem;
+    }
+
+    .social-card p {
+        font-size: 0.55rem;
+    }
+
+    .achievement-card {
+        padding: 16px 12px;
+    }
+
+    .achievement-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .achievement-rank {
+        font-size: 1.8rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 0.7rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.65rem;
+    }
+
+    .achievement-team-logo {
+        width: 36px;
+        height: 36px;
     }
 
     .weapon-img-area {
@@ -1961,11 +2155,8 @@ a {
         font-size: 0.6rem;
     }
 
-    .achievement-card {
-        padding: 22px 16px;
-    }
-
-    .achievement-rank {
-        font-size: 2.2rem;
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.68rem;
     }
 }
