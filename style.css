@@ -1755,6 +1755,119 @@ a {
         flex: none;
         width: 100%;
     }
+
+    .section-light,
+    .section-dark {
+        padding: 60px 0;
+    }
+
+    .about-photo {
+        height: 220px;
+    }
+
+    .skills-overlay {
+        padding: 16px;
+    }
+
+    .skills-overlay h3 {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+    }
+
+    .skill-item {
+        margin-bottom: 10px;
+    }
+
+    .skill-info span {
+        font-size: 0.65rem;
+    }
+
+    .skill-bar {
+        height: 6px;
+    }
+
+    .about-left {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .about-right h2 {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .about-right h3 {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .about-right p {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .achievement-card {
+        padding: 28px 20px;
+    }
+
+    .achievement-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .achievement-rank {
+        font-size: 2.8rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .achievement-card p {
+        font-size: 0.8rem;
+    }
+
+    .achievement-team-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .role-card {
+        padding: 28px 20px;
+    }
+
+    .role-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .role-card h3 {
+        font-size: 1rem;
+    }
+
+    .role-card p {
+        font-size: 0.82rem;
+    }
+
+    .social-card {
+        padding: 24px 16px;
+    }
+
+    .social-card h3 {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1767,19 +1880,72 @@ a {
         align-items: center;
     }
 
+    .section-light,
+    .section-dark {
+        padding: 44px 0;
+    }
+
     .tactical-card {
-        padding: 22px;
+        padding: 20px;
+        min-height: 200px;
     }
 
     .tactical-icon {
-        width: 56px;
-        height: 56px;
-        margin: 26px 0 18px;
+        width: 48px;
+        height: 48px;
+        margin: 18px 0 14px;
+        font-size: 1.2rem;
+    }
+
+    .tactical-kicker {
+        font-size: 0.62rem;
+    }
+
+    .tactical-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .tactical-card p {
+        font-size: 0.82rem;
+        margin-bottom: 16px;
+    }
+
+    .tactical-link {
+        font-size: 0.72rem;
     }
 
     .about-buttons {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .about-photo {
+        height: 180px;
+    }
+
+    .about-left {
+        max-width: 280px;
+    }
+
+    .about-right h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-right h3 {
+        font-size: 0.82rem;
+    }
+
+    .about-right p {
+        font-size: 0.8rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
     }
 
     .weapon-img-area {
@@ -1793,5 +1959,13 @@ a {
 
     .weapon-info h4 {
         font-size: 0.6rem;
+    }
+
+    .achievement-card {
+        padding: 22px 16px;
+    }
+
+    .achievement-rank {
+        font-size: 2.2rem;
     }
 }
