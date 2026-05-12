@@ -376,30 +376,34 @@ a {
    ============================================ */
 .tactical-section {
     padding-top: 90px;
+    padding-bottom: 60px;
 }
 
 .tactical-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .tactical-card {
-    min-height: 300px;
+    min-height: 280px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     padding: 32px;
-    border-radius: 8px;
+    border-radius: 12px;
     background:
-        linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(19, 236, 151, 0.06)),
+        linear-gradient(135deg, rgba(255, 215, 0, 0.10), rgba(19, 236, 151, 0.04)),
         var(--dark-card);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.12);
     color: var(--text-light);
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
 
 .tactical-card::before {
@@ -647,8 +651,10 @@ a {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .achievement-card {
