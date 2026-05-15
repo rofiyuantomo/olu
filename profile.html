@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rofi Yuantomo — Personal Profile</title>
+    <meta name="description" content="Profil pribadi Rofi Yuantomo — Mahasiswa Teknik Informatika, lulusan SMK Teknik Komputer dan Jaringan.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="profile.html" class="nav-logo">
+                <span class="logo-text">ROFI</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-greeting">Halo, saya</p>
+                <h1>Rofi <span class="text-primary">Yuantomo</span></h1>
+                <h2>I am a <span class="typewriter" id="typewriter"></span><span class="cursor">|</span></h2>
+                <p class="hero-tagline">Mahasiswa Teknik Informatika &mdash; Passionate in Technology</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">TENTANG SAYA</a>
+                    <a href="#contact" class="btn btn-outline">HUBUNGI <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-avatar">
+                <div class="avatar-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-dark" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>TENTANG SAYA</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Mengenal lebih dekat siapa saya dan apa yang saya kerjakan.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Siapa Saya?</h3>
+                    <p>Saya adalah Rofi Yuantomo, seorang mahasiswa Teknik Informatika yang memiliki passion di bidang teknologi. Dengan latar belakang pendidikan SMK jurusan Teknik Komputer dan Jaringan, saya memiliki fondasi yang kuat di bidang IT dan terus mengembangkan kemampuan di dunia pemrograman dan teknologi informasi.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Apa yang Saya Lakukan?</h3>
+                    <p>Saat ini saya fokus mendalami ilmu informatika di bangku perkuliahan. Saya tertarik dengan pengembangan web, jaringan komputer, dan teknologi terkini. Saya selalu berusaha belajar hal baru dan mengembangkan skill yang relevan dengan industri teknologi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section-light" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>PENDIDIKAN</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Perjalanan pendidikan saya di bidang teknologi.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge current">Sedang Berjalan</span>
+                        <h3>S1 Teknik Informatika</h3>
+                        <p class="timeline-institution"><i class="fas fa-university"></i> Perguruan Tinggi</p>
+                        <p class="timeline-desc">Mendalami ilmu informatika meliputi pemrograman, basis data, jaringan komputer, kecerdasan buatan, dan pengembangan perangkat lunak.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-badge completed">Lulus</span>
+                        <h3>SMK — Teknik Komputer dan Jaringan</h3>
+                        <p class="timeline-institution"><i class="fas fa-school"></i> Sekolah Menengah Kejuruan</p>
+                        <p class="timeline-desc">Mempelajari dasar-dasar jaringan komputer, instalasi sistem operasi, troubleshooting hardware & software, serta administrasi server.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-dark" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>SKILLS</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Keahlian dan teknologi yang saya kuasai.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Jaringan Komputer</h3>
+                    <p>Konfigurasi LAN/WAN, routing, switching, dan administrasi jaringan.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript dan pengembangan aplikasi web.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Administrasi Server</h3>
+                    <p>Instalasi dan manajemen server Linux/Windows.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database</h3>
+                    <p>Desain dan manajemen basis data MySQL.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Troubleshooting</h3>
+                    <p>Diagnosa dan perbaikan masalah hardware & software.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Keamanan Jaringan</h3>
+                    <p>Dasar-dasar keamanan jaringan dan sistem informasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-light" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>HUBUNGI SAYA</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Tertarik untuk berkolaborasi? Jangan ragu untuk menghubungi saya.</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:rofiyuantomo@gmail.com" class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>rofiyuantomo@gmail.com</p>
+                </a>
+                <a href="https://github.com/rofiyuantomo" target="_blank" class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>rofiyuantomo</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>Rofi Yuantomo</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rofi Yuantomo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="profile.js"></script>
+</body>
+</html>
